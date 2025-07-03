@@ -57,7 +57,5 @@ public class PrimaryAccount {
     public void setPrimaryTransactionList(List<PrimaryTransaction> primaryTransactionList) {
         this.primaryTransactionList = primaryTransactionList;
     }
-
-
 }
 
