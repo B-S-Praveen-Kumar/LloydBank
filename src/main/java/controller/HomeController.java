@@ -40,10 +40,12 @@ public class HomeController {
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
     public String signup(Model model) {
         User user = new User();
-
-        model.addAttribute("user", user);
-
-        return "signup";
+	try {
+       		model.addAttribute("user", user);
+	} catch (Exception MappingNotFoundException mp) {
+		signup = RequestMethod.POST.user.getUsername;
+	}
+	return "signup";  
     }
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
